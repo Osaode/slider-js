@@ -15,6 +15,10 @@ body{
     background-color: #f2f2f2;
 }
 
+.swiper{
+    width: 950px;
+}
+
 section .card .image{
     height: 140px;
     width: 140px;
@@ -32,6 +36,100 @@ section .card .image img{
 }
 
 .card{
+    position: relative;
+    background-color: #fff;
     border-radius: 20px;
-    background: #fff;
+    margin: 20px 0;
+    width: 280px;
+}
+
+.card::before{
+    content: "";
+    position: absolute;
+    height: 45%;
+    width: 100%;
+    background-color: #7d2ae7;
+    border-radius: 20px 20px 0 0;
+}
+
+.card .card-content{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+    z-index: 100;
+}
+
+.card .media-icons{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card .media-icons i{
+    color: #fff;
+    opacity: 0.6;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card .media-icons i:hover{
+    opacity: 1;
+}
+
+.card .name-profession{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    color: #333;
+}
+
+.name-profession .name{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.name-profession .profession{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.card .rating{
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.card .rating i{
+    font-size: 18px;
+    margin: 0 2px;
+    color: #7d2ae7;
+}
+
+.card .button{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.card .button button{
+    background-color: #7d2ae7;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 8px 22px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.button button:hover{
+    background-color: #6616d0;
 }
